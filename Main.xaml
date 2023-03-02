@@ -74,7 +74,7 @@
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2">
       <ui:MessageBox.Text>
         <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"My Favourate Hero is Chiru"</CSharpValue>
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"My Favourate Hero is Chiru"+" My Favourate Player is Virat"</CSharpValue>
         </InArgument>
       </ui:MessageBox.Text>
     </ui:MessageBox>
