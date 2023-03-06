@@ -102,9 +102,21 @@ pipeline {
 	        always {
             echo 'I will always say Hello again!'
             
-            emailext body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}",
-                recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
-                subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
+            //emailext body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}",
+                //recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
+                //subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
+			
+		mail(
+			bcc: '',
+			body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}",
+			cc: '',
+			charset: 'UTF-8',
+			from: 'subhanis@nfcsolutionsusa.com',
+			mimeType: 'text/html',
+			replyTo: '',
+			subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}",
+			to: "subhanis@nfcsolutionsusa.com"
+			)
             
               }
 	    }
